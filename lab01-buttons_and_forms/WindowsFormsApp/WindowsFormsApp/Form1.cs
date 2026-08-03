@@ -76,5 +76,15 @@ namespace WindowsFormsApp
             
         }
 
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (myButton != null)
+            {
+                int centerX = (this.ClientSize.Width - myButton.Width) / 2;
+                int centerY = (this.ClientSize.Height - myButton.Height) / 2;
+
+                myButton.Location = new Point(centerX, centerY);
+            }
+        }
     }
 }

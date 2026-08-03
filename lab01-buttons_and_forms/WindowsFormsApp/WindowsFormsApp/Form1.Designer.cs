@@ -44,11 +44,12 @@
             this.LabelLastNameStudentInfo = new System.Windows.Forms.Label();
             this.LabelGroupStudentInfo = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelPaint = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.SpawnButtonsCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.toolStripStatusLabelPaint = new System.Windows.Forms.ToolStripStatusLabel();
+            this.myButton = new System.Windows.Forms.Button();
             this.StudentInfoGroupBox.SuspendLayout();
             this.GroupBoxChangeMarkStudentInfo.SuspendLayout();
             this.GroupBoxChangeStudentInfo.SuspendLayout();
@@ -232,6 +233,12 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // toolStripStatusLabelPaint
+            // 
+            this.toolStripStatusLabelPaint.Name = "toolStripStatusLabelPaint";
+            this.toolStripStatusLabelPaint.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabelPaint.Text = "toolStripStatusLabel1";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -273,22 +280,27 @@
             this.tabPage2.Text = "Прикол2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // toolStripStatusLabelPaint
+            // myButton
             // 
-            this.toolStripStatusLabelPaint.Name = "toolStripStatusLabelPaint";
-            this.toolStripStatusLabelPaint.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabelPaint.Text = "toolStripStatusLabel1";
+            this.myButton.Location = new System.Drawing.Point(13, 489);
+            this.myButton.Name = "myButton";
+            this.myButton.Size = new System.Drawing.Size(135, 23);
+            this.myButton.TabIndex = 3;
+            this.myButton.Text = "Я всегда в центре!";
+            this.myButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.myButton);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.StudentInfoGroupBox);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
@@ -331,6 +343,7 @@
         private System.Windows.Forms.CheckBox SpawnButtonsCheckBox;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPaint;
+        private System.Windows.Forms.Button myButton;
     }
 }
 
