@@ -50,5 +50,16 @@ namespace WindowsFormsApp
             labelX.Text = $"X: {e.X.ToString()}";
             labelY.Text = $"X: {e.Y.ToString()}";
         }
+
+        private void MainForm_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (SpawnButtonsCheckBox.Checked)
+            {
+                Button newButton = new Button();
+                newButton.Text = "New Button";
+                newButton.Location = new Point(e.X - newButton.Width / 2, e.Y - newButton.Height / 2);
+                this.Controls.Add(newButton);
+            }
+        }
     }
 }
