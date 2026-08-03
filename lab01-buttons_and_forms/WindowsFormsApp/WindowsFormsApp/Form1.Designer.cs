@@ -48,9 +48,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.SpawnButtonsCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.toolStripStatusLabelPaint = new System.Windows.Forms.ToolStripStatusLabel();
             this.StudentInfoGroupBox.SuspendLayout();
             this.GroupBoxChangeMarkStudentInfo.SuspendLayout();
             this.GroupBoxChangeStudentInfo.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -222,6 +224,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelPaint});
             this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(784, 22);
@@ -269,6 +273,12 @@
             this.tabPage2.Text = "Прикол2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // toolStripStatusLabelPaint
+            // 
+            this.toolStripStatusLabelPaint.Name = "toolStripStatusLabelPaint";
+            this.toolStripStatusLabelPaint.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabelPaint.Text = "toolStripStatusLabel1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +289,7 @@
             this.Controls.Add(this.StudentInfoGroupBox);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.StudentInfoGroupBox.ResumeLayout(false);
@@ -287,6 +298,8 @@
             this.GroupBoxChangeMarkStudentInfo.PerformLayout();
             this.GroupBoxChangeStudentInfo.ResumeLayout(false);
             this.GroupBoxChangeStudentInfo.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -317,6 +330,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.CheckBox SpawnButtonsCheckBox;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPaint;
     }
 }
 
